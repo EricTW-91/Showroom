@@ -38,68 +38,86 @@ section div{
 .square1{
     background-color: #77AADD;
 }
+.square1:hover{
+    transform: translate(50px);
+    transition-duration: 2s;
+}
+
 .square2{
     background-color: #99DDFF;
 }
+.square2:hover{
+    transform: scale(2, 2);
+    transition-duration: 2s;
+}
+
 .square3{
     background-color: #44BB99;
 }
-.square4{
-    background-color: #BBCC33;
-}
-.square5{
-    background-color: #AAAA00;
-}
-.square6{
-    background-color: #EEDD88;
-}
-.square7{
-    background-color: #EE8866;
-
-        
-    animation-name: xMove;
-    animation-duration: 3s;
-}
-.square8{
-    background-color: #FFAABB;
-}
-.square9{
-    background-color: #DDDDDD;
-}
-
-
-.square1:hover{
-    transform: translate(50px);
-}
-
-.square2:hover{
-    transform: scale(2, 2);
-}
-
 .square3:hover{
     transform: rotateX(180deg);
     transition-duration: 1s;
 }
 
+.square4{
+    background-color: #BBCC33;
+}
 .square4:hover{
     transform: rotateZ(180deg);
     transition-duration: 1s;
 }
 
+.square5{
+    background-color: #AAAA00;
+}
 .square5:hover{
     transform: skewY(90deg);
+    transition-duration: 2s;
 }
 
+
+.square6{
+    background-color: #EEDD88;
+}
 .square6:hover{
     background-color: deepskyblue;
     transition-duration: 1s;
 }
 
+.square7{
+    background-color: #EE8866;
+
+    position: relative;
+    animation-name: xMove;
+    animation-duration: 3s;
+}
 @keyframes xMove{
     0% {left: 20px}
     100% {left: 700px}
 }
-.square7:hover{
-    animation-name: xMove;
-    animation-duration: 3s;
+
+.square8{
+    background-color: #FFAABB;
+
+    position: relative;
+    animation-name: s8Move;
+    animation-duration: 0.2s;
+    animation-iteration-count: 5;
+}
+@keyframes s8Move{
+    0%   {background-color:red; left:0px; top:0px; width: 10%; height: 10%;}
+    25%  {background-color:yellow; left:100px; top:0px; width: 10%; height: 10%;}
+    50%  {background-color:blue; left:50px; top:100px; width: 10%; height: 10%;}
+    75%  {background-color:green; left:20px; top:100px; width: 10%; height: 10%;}
+    100% {background-color:red; left:0px; top:0px; width: 10%; height: 10%;}
+}
+
+.square9{
+    background-color: #DDDDDD;
+}
+.square9:hover{
+    width: 100px;
+    height: 100px;
+    background-color: forestgreen;
+    transition-duration: 2s;
 }
